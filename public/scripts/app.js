@@ -2,11 +2,33 @@
 
 console.log('App JS is running!');
 
-var template = React.createElement(
-  'h1',
-  null,
-  ' This is JSX from app.js!'
+// var template = (
+// <div>
+//     <h1> Indecision App</h1>
+//     <p> This is a paragraph</p>
+// </div>
+// ); 
+
+var templateTwo = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        'Justin Garavel'
+    ),
+    React.createElement(
+        'p',
+        null,
+        'Age: 28'
+    ),
+    React.createElement(
+        'p',
+        null,
+        'Location: Tokyo'
+    )
 );
+
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
