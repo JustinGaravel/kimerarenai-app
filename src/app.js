@@ -1,3 +1,4 @@
+
 class IndecisionApp extends React.Component {
   render() {
     const title = 'Indecision App';
@@ -27,21 +28,33 @@ class Header extends React.Component {
 }
 
 class Action extends React.Component {
+  handlePick() {
+    alert('Picking...');
+  }
   render() {
     return (
       <div>
-        <button>What should I do?!</button>
+        <button onClick={this.handlePick}>What should I do?!</button>
       </div>
     );
   }
 }
 
-// Options class -> options component here
 class Options extends React.Component {
+  constructor (props) {
+    super(props);
+    this.handleRemoveAll = this.handleRemoveAll.bind(this);
+  }
+  handleRemoveAll() {
+    alert('handleRemoveAll clicked!');
+    console.log(this.props.options);
+  }
+
   render() {
     return (
       <div>
-        {this.props.options.length}
+        <button onClick={this.handleRemoveAll}>Remove All</button>
+      
         {
           this.props.options.map((option) => <Option key={option} optionText={option}/>)
         }
@@ -61,13 +74,30 @@ class Option extends React.Component {
   }
 }
 
+
+// set up form as same in jsx-indecision
+// wire up onSubmit
+// call a method -> handleAddOption
+//   fetch value typeed -> if exist, alert it to screen
 class AddOption extends React.Component {
+  handleAddOption (e) {
+    e.preventDefault();
+    
+    const option = e.target.elements.option.value.trim();
+
+    if(option) {
+      alert(option);
+      e.target.elements.option.value = '';      
+    }
+  }
+
   render() {
     return (
       <div>
-        <p>
-          Options component goes HERE
-        </p>
+        <form onSubmit={this.handleAddOption}>
+          <input type="text" name="option" />
+          <button>Add Option</button>
+        </form>
       </div>
     )
   }
