@@ -53,11 +53,8 @@ class Traveller extends Person {
   }
 }
 
-
-
 const me = new Traveller('Justin Garavel', 28, 'Connecticut');
 console.log(me.getGreeting());
-
 
 const you = new Traveller();
 console.log(you.getGreeting());
