@@ -1,17 +1,10 @@
 console.log('person.js is running...');
 
-const isAdult = (age) => {
-  if (age >= 20) {
-    return true;
-  }
-  return false;
-}
+const isAdult = (age) => age >= 20;
 
-const canDrink = (age) => {
-  if (age >= 20) {
-    return true;
-  }
-  return false;
-}
+const canDrink = (age) => age >= 20;
 
-export { isAdult, canDrink };
+const isSeniorCitizen = (age) => age >= 65;
+
+// export default isSeniorCitizen;
+export { isAdult, canDrink, isSeniorCitizen as default };
