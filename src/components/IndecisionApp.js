@@ -74,7 +74,7 @@ export default class IndecisionApp extends React.Component {
 
   render() {
     const title = 'Indecision App';
-    const subtitle ="Let the internet decide for you!";
+    const subtitle ="インタネットに決めてもらおう！";
 
     return (
       <div>
