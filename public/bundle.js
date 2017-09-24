@@ -65,9 +65,65 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-console.log('app.js is running...!');
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person_js__ = __webpack_require__(2);
+// // import './utils';
+// import { square, add } from './utils.js';
+
+// console.log('app.js is running...!');
+// console.log('square of 4: ', square(4));
+// console.log('add 4 + 5: ', add(4,5));
+
+// person.js
+// named export isAdult - true of adult, false if not
+// named export canDrink - true if can drink, false if not
+
+// import isAdult and canDrink
+// use both and make them print to console
+
+
+
+const myAge = 28;
+const underage = 19;
+
+console.log('myAge', myAge);
+console.log('underage', underage);
+
+console.log('Can I drink?', __WEBPACK_IMPORTED_MODULE_0__person_js__["a" /* canDrink */](myAge));
+console.log('Can you drink?', __WEBPACK_IMPORTED_MODULE_0__person_js__["a" /* canDrink */](underage));
+
+console.log('Am I an adult?', __WEBPACK_IMPORTED_MODULE_0__person_js__["b" /* isAdult */](myAge));
+console.log('Are you an adult?', __WEBPACK_IMPORTED_MODULE_0__person_js__["b" /* isAdult */](underage));
+
+
+/***/ }),
+/* 1 */,
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return isAdult; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return canDrink; });
+console.log('person.js is running...');
+
+const isAdult = (age) => {
+  if (age >= 20) {
+    return true;
+  }
+  return false;
+}
+
+const canDrink = (age) => {
+  if (age >= 20) {
+    return true;
+  }
+  return false;
+}
+
+
 
 /***/ })
 /******/ ]);
