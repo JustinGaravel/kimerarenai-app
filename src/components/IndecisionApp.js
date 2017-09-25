@@ -32,10 +32,10 @@ export default class IndecisionApp extends React.Component {
 
   handleAddOption = (option) => {
     if (!option) {
-      return 'Enter valid value to add option';
+      return '正しい選択枝を入力してください';
       // indexOf returns the location in array or -1 if doesn't exist
     } else if (this.state.options.indexOf(option) > -1) {
-      return 'This option already exists'
+      return '選択枝はもう存在しています';
     }
     this.setState((prevState) => ({ options: prevState.options.concat(option) }));
   };
@@ -48,7 +48,6 @@ export default class IndecisionApp extends React.Component {
 
   componentDidMount () {
     try {
-      console.log('retrieving data');
       const json = localStorage.getItem('options');
       const options = JSON.parse(json);
 
@@ -64,7 +63,6 @@ export default class IndecisionApp extends React.Component {
     if(prevState.options.length !== this.state.options.length) {
       const json = JSON.stringify(this.state.options);
       localStorage.setItem('options', json);
-      console.log('saving data');      
     }
   }
 
@@ -80,7 +78,8 @@ export default class IndecisionApp extends React.Component {
             hasOptions={this.state.options.length > 0} 
             handlePick={this.handlePick}
           />
-          <Options
+          <div className="widget">
+            <Options
             options={this.state.options}
             handleDeleteOptions={this.handleDeleteOptions}
             handleDeleteOption={this.handleDeleteOption}
@@ -88,6 +87,7 @@ export default class IndecisionApp extends React.Component {
           <AddOption 
             handleAddOption={this.handleAddOption}
           />
+          </div>
         </div>
         <OptionModal
           handleSelectedOption={this.handleSelectedOption}
