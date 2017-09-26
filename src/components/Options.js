@@ -7,7 +7,7 @@ const Options = (props) => (
     <div className="widget-header">
       <h3 className="widget-header__title">選択枝</h3>
       <button
-        className="button button--link"
+        className="button button--link button--delete-all"
         onClick={props.handleDeleteOptions}
       >
         全て削除

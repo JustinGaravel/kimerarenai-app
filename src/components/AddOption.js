@@ -20,7 +20,7 @@ export default class AddOption extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="add-option__container">
       {this.state.error && <p className="add-option__error">{this.state.error}</p>}
         <form
           className="add-option"

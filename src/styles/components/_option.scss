@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   padding: $l-size $m-size;
-  border-bottom: 1px solid lighten($light-blue, 10%);
+  border-bottom: 1px solid lighten($light-gray, 10%);
 }
 
 .option__text {
-  color: white;
+  color: black;
   font-weight: 500;
   font-size: $option-text-size;
   margin: 0;

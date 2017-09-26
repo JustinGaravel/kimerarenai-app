@@ -9,7 +9,7 @@ const OptionModal = (props) => (
     closeTimeoutMS={250}
     className="modal"
   >
-    <h3 className="modal__title">選択枝</h3>
+    <h3 className="modal__title">結果</h3>
     { props.selectedOption && <p className="modal__body">{ props.selectedOption }</p>}
     <button
     className="button"
