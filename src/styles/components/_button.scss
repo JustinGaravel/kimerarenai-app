@@ -25,6 +25,15 @@
   padding: $s-size;
 }
 
+.button__confirm {
+  margin-bottom: $m-size;
+}
+
+.button__container {
+  display: flex;
+  flex-direction: column;
+}
+
 .button--link {
   background: none;
   border: none;
