@@ -9,7 +9,7 @@
     "serve": "live-server public/",
     "build": "webpack",
     "predeploy": "webpack",
-    "deploy": "aws s3 cp build s3://kimerarenai-hosting-mobilehub-1708233030 --recursive",
+    "deploy": "aws s3 cp public s3://kimerarenai-hosting-mobilehub-1708233030 --recursive",
     "dev-server": "webpack-dev-server"
   },
   "dependencies": {
