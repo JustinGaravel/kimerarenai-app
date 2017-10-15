@@ -67,7 +67,7 @@ export default class IndecisionApp extends React.Component {
   }
 
   render() {
-    const title = 'Indecision';
+    const title = 'Kimerarenai';
     const subtitle ="インタネットに決めてもらおう！";
 
     return (
