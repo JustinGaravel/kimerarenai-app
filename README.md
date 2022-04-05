@@ -1,5 +1,5 @@
 # Kimerarenei
-A SPA that helps you decide between a few choices. It can be viewed [here](https://kimerarenai.justingaravel.com/).
+A SPA that helps you decide between a few choices. It can be viewed [here](https://kimerarenai.justingaravel.com/). (Link depreciated)
 
 迷う時に決めてくれるSPA（シングル・ページ・アプリケーション」です。[こちら](https://kimerarenai.justingaravel.com/)にご覧いただけます。
 
